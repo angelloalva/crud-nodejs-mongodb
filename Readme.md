@@ -1,0 +1,4 @@
+## Variables
+* PORT . POR DEFECTO 3000
+* NOTES_YUKN_MONGODB_HOST =localhost
+* NOTES_YUKN_MONGODB_DATABASE =notes-yukn

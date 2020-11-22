@@ -1,0 +1,25 @@
+<div class="col-md-4 mx-auto">
+
+    <div class="card text-center">
+        <div class="card-header">
+        <h2>Notes</h2>
+    </div>
+    <div class="card-body">
+         <form action="/notes/new-note" method="POST"> 
+        <div class="form-group">
+            <input type="text" class="form-control" name="title" placeholder="Write a title" autofocus>
+        </div>
+        <div class="form-group">
+            <textarea  class="form-control" id="txaMessage" name="description" placeholder="Write a description" maxlength="150"></textarea>
+        <div class="text-right"><span id="caracteres" class="valid-text pt-3" id="txaCount"></span></div>
+        </div>
+
+        <div class="form-group"><button type="submit" class="btn btn-primary btn-block">Save</button></div>
+            
+
+    </form>
+    </div>
+    </div>
+    
+   
+</div>
