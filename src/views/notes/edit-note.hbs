@@ -5,13 +5,13 @@
         <h2>Edit Note</h2>
     </div>
     <div class="card-body">
-         <form action="/notes/edit/{{id}}?_method=PUT" method="POST"> 
+         <form action="/notes/edit/{{note.id}}?_method=PUT" method="POST"> 
          <input type="hidden" name="_method" value="PUT">
         <div class="form-group">
-            <input type="text" class="form-control" name="title" placeholder="Write a title" value="{{title}}">
+            <input type="text" class="form-control" name="title" placeholder="Write a title" value="{{note.title}}">
         </div>
         <div class="form-group">
-            <textarea  class="form-control" id="txaMessage" name="description" placeholder="Write a description" maxlength="150">{{description}}</textarea>
+            <textarea  class="form-control" id="txaMessage" name="description" placeholder="Write a description" maxlength="150">{{note.description}}</textarea>
         <div class="text-right"><span id="caracteres" class="valid-text pt-3" id="txaCount"></span></div>
         </div>
 

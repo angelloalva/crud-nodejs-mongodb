@@ -4,7 +4,7 @@
         Datos
     </div>
     <div class="card-body">
-         <form action="/users/profile/{{id}}?_method=PUT" method="POST"> 
+         <form action="/users/profile/{{user._id}}?_method=PUT" method="POST"> 
          <input type="hidden" name="_method" value="PUT">
          <div class="form-group">
             <input type="text" class="form-control" name="name" value="{{user.name}}">

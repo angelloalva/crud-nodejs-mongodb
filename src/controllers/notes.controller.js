@@ -44,7 +44,11 @@ notesCtrl.renderEditForm=async(req,res)=>{
         req.flash('error_msg','No Autorizado!');
         return res.redirect('/notes');
     }
-    res.render('notes/edit-note',{note,email:req.user.email});
+
+
+    res.render('notes/edit-note',{note:note,user:req.user});
+    console.log(req.user);
+    console.log(note);
 }
 
 notesCtrl.updateNote= async(req,res)=>{

@@ -44,7 +44,8 @@ userCtrl.renderLoginForm=(req,res)=>{
 
 userCtrl.updateUser= async(req,res)=>{
     const {name,email,password}=req.body;
-    pass= await Use.encryptPassword(password);
+    const user =await User.findOne({email});
+    pass= await user.encryptPassword(password);
     await User.findByIdAndUpdate(req.params.id,{name,email,pass});
     req.flash('success_msg','Datos Actualizados!');
     res.redirect('/notes');
