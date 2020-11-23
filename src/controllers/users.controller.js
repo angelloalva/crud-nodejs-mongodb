@@ -53,12 +53,12 @@ userCtrl.updateUser= async(req,res)=>{
 
 userCtrl.Profile=async (req,res)=>{
    
-    const user =await User.findById(req.user.id);
+    //const user =await User.findById(req.user.id);
 
   
-    res.render('users/profile',user);
+    res.render('users/profile');
 }
-userCtrl.Login=passport.authenticate('local',{
+userCtrl.Logeo=passport.authenticate('local',{
     failureRedirect:'/users/login',
     successRedirect:'/notes',
     failureFlash:true

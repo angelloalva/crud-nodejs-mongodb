@@ -1,7 +1,7 @@
 const {renderRegisterForm,
        Register,
        renderLoginForm,
-       Login,
+       Logeo,
        Logout,
        Profile,updateUser
         } =require('../controllers/users.controller');
@@ -14,7 +14,7 @@ router.get('/users/register',renderRegisterForm);
 router.post('/users/register',Register);
 
 router.get('/users/login',renderLoginForm);
-router.post('/users/login',Login);
+router.post('/users/login',Logeo);
 
 router.get('/users/logout',isAuthenticated,Logout);
 
