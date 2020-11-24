@@ -12,6 +12,7 @@
                    
             
                 <p>{{description}}</p>
+                <p>{{timeago updatedAt}}</p>
                 <form action="/notes/delete/{{id}}?_method=DELETE" method="POST">
                      <input type="hidden" name="_method" value="DELETE">
                      <button type="submit" class="btn btn-danger btn-block">Delete</button>

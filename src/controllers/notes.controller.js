@@ -15,9 +15,10 @@ notesCtrl.createNewNote=async (req,res)=>{
 }
 notesCtrl.renderNotes= async (req,res)=>{
   //REALIZAMOS LA PETICION
-   const notes =await Note.find({user:req.user.id}).sort({ createdAt: 'desc' }).then(notesItem => {
+   const notes =await Note.find({user:req.user.id}).sort({ createdAt: 'desc' })
+   /*.then(notesItem => {
     //CREAMOS UN NUEVO OBJETO DONDE ALMACENAR EL ARRAY
-    const myObject= {
+     const myObject= {
         //MAPEAMOS LOS RESULTADOS
         notes: notesItem.map(item => {
             return {
@@ -27,12 +28,13 @@ notesCtrl.renderNotes= async (req,res)=>{
                 user:item.user
             }
         })
-    }
+    } 
   
-    const notes = myObject.notes;
-    res.render('notes/all-notes', { notes:myObject.notes});
-   })
-    
+    const notes = myObject.notes;*/
+    //res.render('notes/all-notes', { notes:myObject.notes});
+   
+   //})
+     res.render('notes/all-notes', {notes:notes});
  
 
 }
